@@ -1,38 +1,110 @@
-<!DOCTYPE html> 
-<html lang="pt-br"> 
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>W.W</title> 
-<style> 
-header{ 
-background-color: #f2dd35; 
-color: #141202; 
-text-align: center; 
-max-width: 800px; 
-margin: 0 auto; 
-padding: 16px; 
-} 
-main{ 
-background-color: #fa720a; 
-color: #706c69; 
-max-width: 800px; 
-margin: 0 auto; 
-padding: 16px; 
-} 
-img{ 
-width: 80px; 
-height: 80px; 
-} 
-</style> 
-</head> 
-<body> 
-<header> 
-<h1>Walther White</h1> 
-<p>Vou falar sobre o personagem Walther de Breaking Bad</p> </header> 
-<main> 
-<img src="Joryverso.png" alt="Logotipo circular estilizado em roxo e verde neon do Joryverso Otaku, mostrando o perfil de um personagem de anime com fones de ouvido olhando para uma tela de computador com linhas de circuitos integrados e programação."> <h2>Bem-Vindos ao blog do WW</h2> 
-<p>Por: Guilherme Mocelin</p> 
-<p>Fala, galera! Sejam muito bem-vindos ao meu site</p> 
-<p>Fala, galera! Sejam muito bem-vindos ao meu site! Todos me chamam de gui, e criei o blog do WW — com essa vibe amarelo, preto, e laranja que remete muito a série Breaking Bad, fiz esse blog porque gosto muito do personagem e essa é minha série favorita e a melhor que eu já assisti; por isso resolvi fazer essa homenagem, e também para deixar uma marca minha na internet. ✨</p> </main> 
-</body> 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W.W - Blog do Walter White</title>
+    <style>
+        header {
+            background-color: #f2dd35;
+            color: #141202;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        main {
+            background-color: #fa720a;
+            color: #141202;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        article {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-bottom: 16px;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 6px 12px;
+            margin-right: 8px;
+            margin-top: 8px;
+            border: none;
+            border-radius: 4px;
+            background-color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Walter White</h1>
+        <p>Vou falar sobre o personagem Walter de Breaking Bad</p>
+    </header>
+
+    <main>
+        <article>
+            <img src="imagem-blog.png" alt="Foto do autor Gui ou imagem relacionada a Breaking Bad">
+            <div>
+                <h2>Bem-vindos ao blog WW!</h2>
+                <p class="artigo-autor">Por: Gui</p>
+                <p>Fala, galera! Sejam muito bem-vindos ao meu site! Todos me chamam de Gui, e criei o blog do WW — com essa vibe amarelo, preto e laranja que remete muito à série Breaking Bad. Fiz esse blog porque gosto muito do personagem e essa é minha série favorita e a melhor que eu já assisti; por isso resolvi fazer essa homenagem, e também para deixar uma marca minha na internet. ✨</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem-blog.png" alt="Imagem relacionada ao segundo post de Breaking Bad">
+            <div>
+                <h2>Por que Walter White é um personagem tão marcante?</h2>
+                <p class="artigo-autor">Por: Gui</p>
+                <p>A transformação do Walter de um professor de química comum para o lendário Heisenberg é uma das melhores construções de personagem da história das séries. Em breve vou trazer mais análises sobre os episódios marcantes!</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function (botao) {
+            let curtiu = false;
+            botao.addEventListener("click", botaoClicado);
+
+            function botaoClicado() {
+                console.log("fui clicado");
+                let texto = botao.querySelector("span");
+                if (curtiu === false) {
+                    texto.textContent++;
+                    curtiu = true;
+                } else {
+                    texto.textContent--;
+                    curtiu = false;
+                }
+            }
+        });
+    </script>
+</body>
 </html>
